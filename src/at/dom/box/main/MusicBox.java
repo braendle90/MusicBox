@@ -167,6 +167,14 @@ public class MusicBox {
         this.recordlist = recordlist;
     }
 
+    public Record getActualRecord() {
+        return actualRecord;
+    }
+
+    public void setActualRecord(Record actualRecord) {
+        this.actualRecord = actualRecord;
+    }
+
     /*
     public void searchRecord(String title){
 

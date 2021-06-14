@@ -31,7 +31,19 @@ public class ConsoleGUI implements GUI{
             System.out.println(musicBox.getSumOfMusic());
         }
         if (input == 3) {
-            //System.out.println(musicBox.ausgabeRecordList());
+            musicBox.ausgabeRecordList();
+            System.out.println("Choose a record");
+            input = scanner.nextInt();
+
+            musicBox.load(4);
+
+            musicBox.
+
+
+
+
+
+
         }
 
 
