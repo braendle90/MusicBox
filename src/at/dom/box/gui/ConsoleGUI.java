@@ -28,6 +28,7 @@ public class ConsoleGUI implements GUI{
         musicBox.load(4);
 
         //test
+        System.out.println("dominik");
 
     }
 
