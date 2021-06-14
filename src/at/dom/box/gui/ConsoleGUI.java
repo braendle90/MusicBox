@@ -1,7 +1,9 @@
 package at.dom.box.gui;
 
 import at.dom.box.main.MusicBox;
+import at.dom.box.main.Record;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class ConsoleGUI implements GUI{
@@ -11,6 +13,7 @@ public class ConsoleGUI implements GUI{
     public void start() {
         int input;
         String searchString;
+        List<Record> recordList;
 
         System.out.println("1 search for record");
         System.out.println("2 get sum of music");
@@ -33,17 +36,24 @@ public class ConsoleGUI implements GUI{
         }
 
         if (input == 3) {
-            //musicBox.ausgabeRecordList();
+            musicBox.ausgabeRecordList();
 
             System.out.println("Choose a record");
-            input = scanner.nextInt();
+            searchString = scanner.next();
+
 
             //musicBox.load(4);
             //musicBox.loadRecords(recordACDC);
 
             musicBox.loadRecords(musicBox.getActualRecord());
+            recordList = musicBox.getRecordlist();
+
+            //musicBox.loadRecords(musicBox.setActualRecord(searchString));
 
             System.out.println(musicBox.getActualRecord());
+
+        }
+        if (input == 4) {
 
         }
 
