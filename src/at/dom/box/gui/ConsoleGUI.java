@@ -29,6 +29,7 @@ public class ConsoleGUI implements GUI{
 
         //test
 
+        System.out.println("hello i am stefan");
     }
 
     @Override
