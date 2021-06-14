@@ -23,26 +23,27 @@ public class ConsoleGUI implements GUI{
         input = scanner.nextInt();
 
         if (input == 1) {
-            System.out.println("Write the name of the record your looking for:");
+            System.out.println("Write the name of the title your looking for:");
             searchString = scanner.next();
             musicBox.searchRecord(searchString);
         }
+
         if (input == 2) {
             System.out.println(musicBox.getSumOfMusic());
         }
+
         if (input == 3) {
-            musicBox.ausgabeRecordList();
+            //musicBox.ausgabeRecordList();
+
             System.out.println("Choose a record");
             input = scanner.nextInt();
 
-            musicBox.load(4);
+            //musicBox.load(4);
+            //musicBox.loadRecords(recordACDC);
 
-            musicBox.
+            musicBox.loadRecords(musicBox.getActualRecord());
 
-
-
-
-
+            System.out.println(musicBox.getActualRecord());
 
         }
 
