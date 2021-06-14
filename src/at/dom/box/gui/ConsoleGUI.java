@@ -27,6 +27,8 @@ public class ConsoleGUI implements GUI{
         //musicBox.loadRecords(recordACDC);
         musicBox.load(4);
 
+        //test
+
     }
 
     @Override
