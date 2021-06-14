@@ -30,7 +30,7 @@ public class ConsoleGUI implements GUI{
         //test
         System.out.println("dominik");
 
-        System.out.println("hello i am stefan");
+        System.out.println("hello i am stefan 1");
     }
 
     @Override
