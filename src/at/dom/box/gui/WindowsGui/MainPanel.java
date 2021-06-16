@@ -13,22 +13,22 @@ import java.awt.event.ActionListener;
 public class MainPanel extends JPanel {
 
     private MusicBox musicBox;
-    private JTextField textField;
+    private JTextField txtFieldContentRecordName;
+    private JTextField txtFieldContentTitel;
     private JButton button;
 
     String recordsText = "";
-    
 
     public MainPanel(MusicBox musicBox) {
 
         this.musicBox = musicBox;
         setBackground(Color.lightGray);
         createLabel("Schallplatten name:");
-        createTextField();
+        createTextFieldRecord();
         addJButton();
-
-
+       createSongTitel();
     }
+
 
     public void createLabel(String text) {
 
@@ -37,9 +37,7 @@ public class MainPanel extends JPanel {
 
     public void createLabelWithRecords() {
 
-
-
-        for (Record record: musicBox.getRecordlist()) {
+        for (Record record : musicBox.getRecordlist()) {
             recordsText.concat(record.getRecordTitel());
 
         }
@@ -47,11 +45,11 @@ public class MainPanel extends JPanel {
         this.add(new JLabel(recordsText));
     }
 
-    public void createTextField() {
+    public void createTextFieldRecord() {
 
-        textField = new JTextField();
-        textField.setPreferredSize(new Dimension(100, 30));
-        this.add(textField);
+        txtFieldContentRecordName = new JTextField();
+        txtFieldContentRecordName.setPreferredSize(new Dimension(100, 30));
+        this.add(txtFieldContentRecordName);
 
     }
 
@@ -62,9 +60,12 @@ public class MainPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                if (textField.getText().length() > 0) {
-                    Record newRecord = new VinylRecord(3, textField.getText());
-                    System.out.println(textField.getText());
+                System.out.println("länge: " + txtFieldContentRecordName.getText().length());
+
+                if (txtFieldContentRecordName.getText().length() > 0) {
+                    Record newRecord = new VinylRecord(3, txtFieldContentRecordName.getText());
+                    System.out.println(txtFieldContentRecordName.getText());
+                    txtFieldContentRecordName.setText("");
 
                     try {
                         musicBox.addRecord(newRecord);
@@ -79,6 +80,18 @@ public class MainPanel extends JPanel {
             }
         });
 
+    }
+
+    public void createSongTitel() {
+
+        button = new JButton("Titel");
+        this.add(button);
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("TITEL: ");
+            }
+        });
 
 
     }

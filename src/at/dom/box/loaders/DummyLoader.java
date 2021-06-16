@@ -28,14 +28,14 @@ public class DummyLoader implements BoxLoader{
         recordPinkFloyd.addTitel(new Song(3,"hey you"));
         recordPinkFloyd.addTitel(new Song(3,"learning to fly"));
 
-        System.out.println();
+       /* System.out.println();
         System.out.println("Show all titel ACDC ");
         recordACDC.showAllTitels();
 
         System.out.println();
         System.out.println("Show all titel:Pink Floyd ");
         recordPinkFloyd.showAllTitels();
-
+*/
         //add alll plates to the musicbox
 
         try {
@@ -45,7 +45,7 @@ public class DummyLoader implements BoxLoader{
             musicBox.addRecord(recordPinkFloyd);
         } catch (ToMuchRecordsException e) {
             //e.printStackTrace();
-            System.out.println("proglem..." + e.getLocalizedMessage());
+            //System.out.println("proglem..." + e.getLocalizedMessage());
         }
         return musicBox;
     }

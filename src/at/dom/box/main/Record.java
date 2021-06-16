@@ -15,4 +15,6 @@ public interface Record {
 
     List<Song> getSongList();
 
+    String getRecordTitel();
+
 }

@@ -7,7 +7,7 @@ public class MusicBox {
 
 
     private int actualpPlates = 0;
-    private static final int MAXPLATES = 3;
+    private static final int MAXPLATES = 50;
     private double holePlaytime = 0;
     private List<Record> recordlist;
     private Record actualRecord;

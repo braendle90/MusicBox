@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public class WindowsGUi implements GUI{
 
-    private MusicBox musicBox = new MusicBox();
+    private MusicBox musicBox;
 
 
 
@@ -22,5 +22,7 @@ public class WindowsGUi implements GUI{
 
     @Override
     public void setBox(MusicBox box) {
+        this.musicBox = box;
+
     }
 }
